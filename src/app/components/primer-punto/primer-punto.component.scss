@@ -1,0 +1,86 @@
+.instruccion-container {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 30px;
+}
+.instruccion-container span {
+  display: inline-block;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  border: 2px solid var(--accent);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto auto;
+  text-align: center;
+  gap: 1rem 0;
+  position: relative;
+}
+
+/* imágenes */
+.img {
+  display: flex;
+  justify-content: center;
+}
+.img img {
+  width: 160px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+.img img:hover {
+  transform: scale(1.05);
+}
+
+/* fila timeline */
+.timeline-row {
+  grid-column: 1 / -1; /* ocupa toda la fila */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+  align-items: start;
+}
+
+/* línea de fondo */
+.timeline-line {
+  position: absolute;
+  top: 25px; /* altura donde van los círculos */
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: var(--bg-dark);
+  z-index: 0;
+}
+
+/* cada columna del timeline */
+.timeline-col {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background: var(--bg-dark);
+  border-radius: 50%;
+  margin-bottom: 6px;
+}
+
+.date {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color:  var(--text-light);
+    font-weight: bold;
+}

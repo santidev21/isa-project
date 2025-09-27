@@ -1,0 +1,32 @@
+<div class="resolucion-grid">
+  <!-- Columna izquierda -->
+  <div class="resolucion-left">
+    <h2 class="resolucion-pregunta">¿Cómo cambiará su vida después de la última actualización?</h2>
+    <div class="resolucion-video-container">
+      <video src="/assets/video/resolucion.mp4" controls class="resolucion-video"></video>
+    </div>
+    <app-preguntas-container
+      pregunta="¿Cómo debería manejar que la IA no puede estar presente?"
+      [respuestas]="[
+        'Aceptar que la IA tiene limitaciones y buscar apoyo humano.',
+        'Seguir esperando que la IA se vuelva más real y disponible.'
+      ]"
+      nota="Tu respuesta desbloquea la siguiente parte de la historia"
+    ></app-preguntas-container>
+  </div>
+
+  <!-- Columna derecha -->
+  <div class="resolucion-right">
+    <h3 class="resolucion-titulo">Datos sobre el impacto de la IA en la salud emocional</h3>
+    <div class="resolucion-cajas">
+      <div class="resolucion-caja" *ngFor="let dato of datosIA">
+        <img [src]="dato.img" alt="Imagen IA" class="resolucion-caja-img">
+        <div class="resolucion-caja-text">{{ dato.texto }}</div>
+      </div>
+    </div>
+    <div class="resolucion-foro">
+      <p>Ahora que conoces la historia, queremos saber tu opinión. Participa en el foro y cuéntanos qué piensas sobre el final.</p>
+      <button class="foro-btn">Foro</button>
+    </div>
+  </div>
+</div>

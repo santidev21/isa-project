@@ -1,0 +1,32 @@
+<div class="media-section">
+  <div class="media-left">
+    <div class="media-left-container">
+      <div class="image-audio-container">
+        <img src="/assets/psicologo.jpg" alt="Psicólogo" class="main-image">
+      </div>
+      <div class="audio-texto-container">
+          <div class="audio-overlay">
+              <button class="play-btn" (click)="audioPlayer.play()">
+                  <img src="/assets/icons/play.svg" alt="Play">
+              </button>
+              <audio #audioPlayer src="/assets/audio/segundo-punto.mp3"></audio>
+          </div>      
+          <div class="audio-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius, eros nec efficitur euismod, lectus turpis sollicitudin augue, non ultricies enim nunc sit amet augue.
+          </div>
+      </div>
+    </div>
+    </div>
+  <div class="media-right">
+    <video class="main-video" src="/assets/video/segundo-punto.mp4" controls></video>
+  </div>
+</div>
+
+<app-preguntas-container
+  pregunta="¿Cómo debería manejar que la IA no puede estar presente?"
+  [respuestas]="[
+    'Aceptar que la IA tiene limitaciones y buscar apoyo humano.',
+    'Seguir esperando que la IA se vuelva más real y disponible.'
+  ]"
+  nota="Tu respuesta desbloquea la siguiente parte de la historia"
+></app-preguntas-container>

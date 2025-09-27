@@ -1,1 +1,93 @@
+:root {
+  --bg-dark: rgba(0, 0, 0, 0.7);
+  --bg-dark-hover: #262525;
+  --text-light: #fff;
+  --text-dark: #000;
+  --accent: #26869c;
+  --accent-hover: rgb(38, 134, 156, 0.6);
+
+  --timeline-h: 260px;
+  --img-w: 170px;
+  --img-h: 90px;
+  --img-radius: 10px;
+  --marker-size: 18px;
+  --line-height: 6px;
+}
+
+
 /* You can add global styles to this file, and also import other style files */
+/* ======== NORMALIZE / RESET ======== */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;  /* eliminamos scroll */
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+img, picture, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.custom-modal {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  border-radius: 10px;
+  border: none;
+}
+
+.custom-modal .modal-header {
+  border-bottom: none;
+  background-color: transparent;
+}
+
+.custom-modal .modal-title {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.custom-modal .btn-close {
+  filter: invert(1);
+}
+
+.custom-modal .modal-body {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.lock-nota {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  .icon-candado {
+    width: 1.4em;
+    height: 1.4em;
+    stroke-width: 3px;
+    vertical-align: middle;
+  }
+
+  .nota {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--text-light);
+    font-weight: bold;
+    height: 100%;
+  }
+}

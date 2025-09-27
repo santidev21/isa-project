@@ -1,0 +1,50 @@
+/* Contenedor principal con fondo */
+.tabs-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("/assets/tabs-back.png") no-repeat center center;
+  background-size: cover;   /* ocupa toda la pantalla */
+  background-attachment: fixed; /* opcional para efecto fijo */
+  overflow: hidden;
+}
+
+.tabs-background{
+    margin: 10px 80px;
+    background: var(--bg-dark);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+/* Barra de tabs */
+.tabs-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tabs-nav button {
+  background: transparent;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs-nav button.active {
+  background: var(--accent);
+  color: var(--text-light);
+  border: 2px solid var(--text-light);
+}
+
+/* Contenido */
+.tabs-content {
+  flex: 1; /* ocupa todo el espacio restante */
+  // padding: 20px;
+  overflow:hidden; /* si hay mucho contenido, scroll interno */
+}

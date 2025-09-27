@@ -1,0 +1,27 @@
+<div class="about-team-section">
+  <div class="about-left">
+    <h2>Sobre el proyecto</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius, eros nec efficitur euismod, lectus turpis sollicitudin augue, non ultricies enim nunc sit amet augue. Quisque ante magna, varius et vehicula congue, viverra eu nulla.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius, eros nec efficitur euismod, lectus turpis sollicitudin augue, non ultricies enim nunc sit amet augue. Quisque ante magna, varius et vehicula congue, viverra eu nulla.
+    </p>
+  </div>
+  <div class="about-right">
+    <h1 class="team-title">Nuestro Equipo</h1>
+    <div class="team-cards">
+      <div class="team-card" *ngFor="let miembro of equipo">
+        <div class="team-photo">
+          <img [src]="miembro.foto" [alt]="miembro.nombre">
+        </div>
+        <div class="team-info">
+          <div class="team-name">{{ miembro.nombre }}</div>
+          <div class="team-titulos">
+            <div *ngFor="let titulo of miembro.titulos">{{ titulo }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="planteamiento-container">
+  <!-- Columna izquierda: carrusel -->
+  <div id="carouselExample" class="carousel carousel-container slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/comics/comic-2.webp" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/comics/comic-2.webp" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Columna derecha: texto + fotos -->
+  <div class="text-container">
+    <span>
+      Pulsa el botón y explora qué sentirías <br>
+      al hablar con un psicólogo, un amigo o una IA...
+    </span>
+    <div class="image-container">
+      <img src="/assets/psicologo.jpg"
+           alt="psicologo"
+           data-bs-toggle="modal"
+           data-bs-target="#infoModal"
+           (click)="openModal('Psicólogo', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')">
+
+      <img src="/assets/psicologo.jpg"
+           alt="amigo"
+           data-bs-toggle="modal"
+           data-bs-target="#infoModal"
+           (click)="openModal('Amigo', 'Phasellus nec sem in justo pellentesque facilisis.')">
+
+      <img src="/assets/psicologo.jpg"
+           alt="ia"
+           data-bs-toggle="modal"
+           data-bs-target="#infoModal"
+           (click)="openModal('IA', 'Suspendisse potenti. Etiam ultricies nisi vel augue.')">
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content custom-modal">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ modalTitle }}</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{ modalText }}
+      </div>
+    </div>
+  </div>
+</div>

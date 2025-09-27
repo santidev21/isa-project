@@ -1,0 +1,67 @@
+<div class="instruccion-container">
+  <span>Descubre la respuesta de la IA, ¡haz clic en cada mensaje!</span>
+</div>
+
+<div class="timeline-grid">
+  <!-- fila 1: imágenes arriba -->
+  <div class="img top"><img src="/assets/white-pic.png" alt="5 de Febrero"></div>
+  <div></div>
+  <div class="img top"><img src="/assets/white-pic.png" alt="20 de Abril"></div>
+  <div></div>
+  <div class="img top"><img src="/assets/white-pic.png" alt="30 de Junio"></div>
+
+  <!-- fila 2: línea + círculos + fechas -->
+  <div class="timeline-row">
+    <div class="timeline-line"></div>
+    <div class="timeline-col">
+      <div class="circle"></div>
+      <div class="date">5 de Febrero</div>
+    </div>
+    <div class="timeline-col">
+      <div class="circle"></div>
+      <div class="date">16 de Marzo</div>
+    </div>
+    <div class="timeline-col">
+      <div class="circle"></div>
+      <div class="date">20 de Abril</div>
+    </div>
+    <div class="timeline-col">
+      <div class="circle"></div>
+      <div class="date">7 de Mayo</div>
+    </div>
+    <div class="timeline-col">
+      <div class="circle"></div>
+      <div class="date">30 de Junio</div>
+    </div>
+  </div>
+
+  <!-- fila 3: imágenes abajo -->
+  <div></div>
+  <div class="img bottom"><img src="/assets/white-pic.png" alt="16 de Marzo"></div>
+  <div></div>
+  <div class="img bottom"><img src="/assets/white-pic.png" alt="7 de Mayo"></div>
+  <div></div>
+</div>
+
+<!-- preguntas abajo -->
+<app-preguntas-container
+  pregunta="¿Crees que el protagonista está comenzando a depender demasiado de la IA?"
+  [respuestas]="['Sí, parece que está buscando consuelo constantemente en la IA', 'No, la IA le está ayudando a lidiar con sus emociones de manera efectiva.']"
+  nota="Tu respuesta desbloquea la siguiente parte de la historia"
+></app-preguntas-container>
+
+
+<!-- Modal (ya lo tenías listo) -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content custom-modal">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ modalTitle }}</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{ modalText }}
+      </div>
+    </div>
+  </div>
+</div>

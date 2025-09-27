@@ -1,0 +1,12 @@
+<div class="preguntas-container">
+  <div class="pregunta">
+    <h3>{{ pregunta }}</h3>
+    <div class="respuestas">
+      <button class="btn-respuesta" *ngFor="let r of respuestas">{{ r }}</button>
+    </div>
+    <div class="lock-nota" *ngIf="nota">
+      <img src="/assets/icons/lock.svg" alt="Candado" class="icon-candado">
+      <p class="nota">{{ nota }}</p>
+    </div>
+  </div>
+</div>
