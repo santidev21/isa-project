@@ -49,3 +49,9 @@
   justify-content: center;
   align-items: center;
 }
+
+.tabs-nav button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

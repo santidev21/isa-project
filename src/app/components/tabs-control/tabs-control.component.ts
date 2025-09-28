@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { RespuestaService } from '../../services/respuesta.service';
 
 @Component({
   selector: 'app-tabs-control',
@@ -9,5 +10,15 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   styleUrls: ['./tabs-control.component.scss']
 })
 export class TabsControlComponent {
+  constructor(public respuestaService: RespuestaService) {}
 
+  get segundoPuntoEnabled() {
+    return this.respuestaService.tieneRespuesta('P1');
+  }
+  get resolucionEnabled() {
+    return this.respuestaService.tieneRespuesta('P2');
+  }
+  get participacionEnabled() {
+    return this.respuestaService.tieneRespuesta('P3');
+  }
 }
