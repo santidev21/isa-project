@@ -2,7 +2,7 @@
   <div class="media-left">
     <div class="media-left-container">
       <div class="image-audio-container">
-        <img src="/assets/p3.png" alt="Psicólogo" class="main-image">
+        <img src="/assets/p3.jpg" alt="Psicólogo" class="main-image">
       </div>
       <div class="audio-texto-container">
           <div class="audio-overlay">
@@ -12,9 +12,11 @@
               <audio #audioPlayer src="/assets/audio/segundo-punto.mp3"></audio>
           </div>      
           <div class="audio-text">
+            <p>
               Al principio fue solo una aplicación más. Una promesa digital de escucha y compañía. Una voz que parecía cercana, cálida, casi humana.
               Con el tiempo, aquella voz dejó de ser un recurso ocasional y comenzó a estar en todas partes: en las noches de insomnio, en las palabras que ya no se decían en persona, en los silencios que alguna vez se compartieron con otros.
               La frontera entre lo real y lo artificial empezó a desdibujarse. Lo que era tecnología se convirtió en refugio, y el refugio, en dependencia.
+            </p>  
           </div>
       </div>
     </div>
@@ -31,4 +33,5 @@
     'Seguir esperando que la IA se vuelva más real y disponible.'
   ]"
   nota="Tu respuesta desbloquea la siguiente parte de la historia"
+  (responder)="onResponder($event)"
 ></app-preguntas-container>

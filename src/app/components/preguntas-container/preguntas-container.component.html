@@ -2,7 +2,7 @@
   <div class="pregunta">
     <h3>{{ pregunta }}</h3>
     <div class="respuestas">
-      <button class="btn-respuesta" *ngFor="let r of respuestas">{{ r }}</button>
+  <button class="btn-respuesta" *ngFor="let r of respuestas" (click)="onResponder(r)">{{ r }}</button>
     </div>
     <div class="lock-nota" *ngIf="nota">
       <img src="/assets/icons/lock.svg" alt="Candado" class="icon-candado">
