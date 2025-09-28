@@ -11,14 +11,14 @@ import { Component } from '@angular/core';
 export class SobreNosotrosComponent {
 equipo = [
   {
-    foto: '/assets/equipo/placeholder.jpg',
+    foto: '/assets/equipo/Maria.png',
     nombre: 'Maria Isabel Sierra',
     titulos: [
       'Estudiante de octavo semestre de Comunicación Social y Periodismo. Universidad Pontificia Bolivariana.'
     ]
   },
   {
-    foto: '/assets/equipo/placeholder.jpg',
+    foto: '/assets/equipo/Luisa.png',
     nombre: 'Luisa Martínez',
     titulos: [
       'Periodista, Universidad de Antioquia. Asesora de comunicaciones.',
@@ -26,7 +26,7 @@ equipo = [
     ]
   },
   {
-    foto: '/assets/equipo/placeholder.jpg',
+    foto: '/assets/equipo/Slendy.png',
     nombre: 'Slendy Flórez',
     titulos: [
       'Comunicadora Social, Universidad de Pamplona.',
@@ -36,7 +36,7 @@ equipo = [
     ]
   },
   {
-    foto: '/assets/equipo/placeholder.jpg',
+    foto: '/assets/equipo/Xue.png',
     nombre: 'Xue Perez Barrios',
     titulos: [
       'Comunicadora Social y Periodista, Universidad Pontificia Bolivariana.',
@@ -44,7 +44,7 @@ equipo = [
     ]
   },
   {
-    foto: '/assets/equipo/placeholder.jpg',
+    foto: '/assets/equipo/Claudia.png',
     nombre: 'Claudia Sandoval',
     titulos: [
       'Comunicadora Social y Periodista, Universidad Pontificia Bolivariana.',,

@@ -42,9 +42,10 @@
   border: 2px solid var(--text-light);
 }
 
-/* Contenido */
 .tabs-content {
-  flex: 1; /* ocupa todo el espacio restante */
-  // padding: 20px;
-  overflow:hidden; /* si hay mucho contenido, scroll interno */
+  flex: 1;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

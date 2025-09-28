@@ -1,19 +1,20 @@
 import { Component } from '@angular/core';
 import { PreguntasContainerComponent } from '../preguntas-container/preguntas-container.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-primer-punto',
-  imports: [PreguntasContainerComponent],
+  imports: [PreguntasContainerComponent, CommonModule],
   standalone: true,
   templateUrl: './primer-punto.component.html',
   styleUrls: ['./primer-punto.component.scss']
 })
 export class PrimerPuntoComponent {
-  modalTitle = '';
-  modalText = '';
+  modalImg: string = '';
 
-  openModal(title: string, text: string) {
-    this.modalTitle = title;
-    this.modalText = text;
+  openModal(num: number) {
+    this.modalImg = `/assets/linea-tiempo/respuestas/${num}.png`;
+    console.log(this.modalImg);
+    
   }
 }

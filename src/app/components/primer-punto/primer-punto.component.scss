@@ -1,8 +1,7 @@
 .instruccion-container {
   width: 100%;
   text-align: center;
-  margin-bottom: 1rem;
-  margin-top: 30px;
+  margin: 1rem;
 }
 .instruccion-container span {
   display: inline-block;
@@ -29,14 +28,11 @@
   justify-content: center;
 }
 .img img {
-  width: 160px;
   height: 90px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
   cursor: pointer;
   transition: transform .2s ease;
 }
+
 .img img:hover {
   transform: scale(1.05);
 }
@@ -79,8 +75,25 @@
 }
 
 .date {
-    margin-top: 10px;
+    margin-top: 0.5rem;
     font-size: 0.9rem;
     color:  var(--text-light);
     font-weight: bold;
+}
+
+.custom-modal {
+  background: rgba(30, 30, 30, 0.45) !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  border-radius: 12px;
+  border: none;
+  margin: 0.5rem;
+}
+
+.custom-modal .modal-header {
+  border-bottom: none;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.custom-modal .modal-body {
+  padding: 0.5rem;
 }

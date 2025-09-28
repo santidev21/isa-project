@@ -4,11 +4,11 @@
 
 <div class="timeline-grid">
   <!-- fila 1: imágenes arriba -->
-  <div class="img top"><img src="/assets/white-pic.png" alt="5 de Febrero"></div>
+  <div class="img top"><img src="/assets/linea-tiempo/01.png" alt="5 de Febrero" (click)="openModal(1)" data-bs-toggle="modal" data-bs-target="#infoModal"></div>
   <div></div>
-  <div class="img top"><img src="/assets/white-pic.png" alt="20 de Abril"></div>
+  <div class="img top"><img src="/assets/linea-tiempo/03.png" alt="20 de Abril" (click)="openModal(3)" data-bs-toggle="modal" data-bs-target="#infoModal"></div>
   <div></div>
-  <div class="img top"><img src="/assets/white-pic.png" alt="30 de Junio"></div>
+  <div class="img top"><img src="/assets/linea-tiempo/05.png" alt="30 de Junio" (click)="openModal(5)" data-bs-toggle="modal" data-bs-target="#infoModal"></div>
 
   <!-- fila 2: línea + círculos + fechas -->
   <div class="timeline-row">
@@ -37,9 +37,9 @@
 
   <!-- fila 3: imágenes abajo -->
   <div></div>
-  <div class="img bottom"><img src="/assets/white-pic.png" alt="16 de Marzo"></div>
+  <div class="img bottom"><img src="/assets/linea-tiempo/02.png" alt="16 de Marzo" (click)="openModal(2)" data-bs-toggle="modal" data-bs-target="#infoModal"></div>
   <div></div>
-  <div class="img bottom"><img src="/assets/white-pic.png" alt="7 de Mayo"></div>
+  <div class="img bottom"><img src="/assets/linea-tiempo/04.png" alt="7 de Mayo" (click)="openModal(4)" data-bs-toggle="modal" data-bs-target="#infoModal"></div>
   <div></div>
 </div>
 
@@ -56,11 +56,10 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content custom-modal">
       <div class="modal-header">
-        <h5 class="modal-title">{{ modalTitle }}</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        {{ modalText }}
+      <div class="modal-body d-flex justify-content-center">
+        <img *ngIf="modalImg" [src]="modalImg" alt="Respuesta" style="max-width:100%;max-height:300px;">
       </div>
     </div>
   </div>

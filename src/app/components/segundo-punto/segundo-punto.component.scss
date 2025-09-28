@@ -21,7 +21,7 @@
   align-items: center;
   border-radius: 8px;
   padding: 10px 0px;
-  width: 50%;
+  width: 700px;
 }
 
 .main-image {
@@ -68,7 +68,7 @@
     .audio-text {
         background: transparent;
         color: var(--text-light);
-        text-align: left;
+        text-align: justify;
         margin: 0;
         padding: 0;
         max-width: 260px;
@@ -82,8 +82,7 @@
   align-items: center;
 
   .main-video {
-    width: 400px;
-    max-width: 100%;
+    width: 800px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.5);
   }

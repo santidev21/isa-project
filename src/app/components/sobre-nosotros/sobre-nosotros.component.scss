@@ -25,9 +25,10 @@
     letter-spacing: 1px;
   }
   p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: 0.9em;
+    margin-bottom: 0.9rem;
     line-height: 1.6;
+    text-align: justify;
   }
 }
 
@@ -41,7 +42,7 @@
   .team-title {
     font-size: 2.8rem;
     font-weight: bold;
-    color: #fff;
+    color: var(--text-light);
     margin-bottom: 2rem;
     text-align: center;
     letter-spacing: 2px;
