@@ -15,7 +15,16 @@
     </p>
   </div>
   <div class="about-right">
-    <h1 class="team-title">Nuestro Equipo</h1>
+    <div class="team-header-row">
+      <div class="team-header-left"></div>
+      <div class="team-header-center">
+        <h1 class="team-title">Nuestro Equipo</h1>
+      </div>
+      <div class="team-header-right">
+        <img src="/assets/social/Instagram.png" alt="Instagram" class="social-icon" (click)="openSocial('instagram')">
+        <img src="/assets/social/Tiktok.png" alt="Tiktok" class="social-icon" (click)="openSocial('tiktok')">
+      </div>
+    </div>
     <div class="team-cards">
       <div class="team-card" *ngFor="let miembro of equipo">
         <div class="team-photo">

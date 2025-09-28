@@ -53,4 +53,12 @@ equipo = [
     ]
   }
 ];
+
+openSocial(red: 'instagram' | 'tiktok') {
+  if (red === 'instagram') {
+    window.open('https://www.instagram.com/theisaproject?igsh=OWE5NjA2eHFlYnV1&utm_source=qr', '_blank');
+  } else if (red === 'tiktok') {
+    window.open('https://www.tiktok.com/@the.isa.project?_t=ZS-906g1Y3L5MX&_r=1', '_blank');
+  }
+}
 }

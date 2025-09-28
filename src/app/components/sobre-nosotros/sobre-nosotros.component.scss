@@ -39,15 +39,58 @@
   align-items: center;
   min-width: 400px;
 
+  .team-header-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+  min-height: 70px;
+}
+
+.team-header-left {
+  /* vacío, solo para estructura */
+}
+
+.team-header-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-title {
+  margin: 0;
+  text-align: center;
+}
+
+.team-header-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+}
+
   .team-title {
     font-size: 2.8rem;
     font-weight: bold;
     color: var(--text-light);
-    margin-bottom: 2rem;
-    text-align: center;
     letter-spacing: 2px;
     text-shadow: 2px 2px 8px #000;
+    margin: 0 auto;
+    white-space: nowrap;
+    justify-self: center;
   }
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 2px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  .social-icon:hover {
+    transform: scale(1.1);
+  }
+  
 
   .team-cards {
     display: flex;
