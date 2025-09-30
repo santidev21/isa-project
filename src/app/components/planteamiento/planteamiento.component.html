@@ -1,6 +1,7 @@
 <div class="planteamiento-container">
   <!-- Columna izquierda: carrusel -->
-  <div id="carouselExample" class="carousel carousel-container slide">
+   <div class="comic-guide">
+      <div id="carouselExample" class="carousel carousel-container slide">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="assets/comics/1.png" class="d-block w-100" alt="...">
@@ -26,7 +27,10 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
+      </div>
+      <p>Presiona en las flechas para ver el cómic.</p>
+   </div>
+  
 
   <!-- Columna derecha: texto + fotos -->
   <div class="text-container">
@@ -39,21 +43,44 @@
            alt="psicologo"
            data-bs-toggle="modal"
            data-bs-target="#infoModal"
-           (click)="openModal('Psicólogo', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')">
+           (click)="openModal('Psicólogo', 'Comprendo lo difícil que resulta esta situación para ti. Desde la psicología sabemos que
+expresar lo que se siente es un primer paso terapéutico importante. Según la American
+Psychological Association (2023), la psicoterapia cognitivo-conductual ha mostrado una
+efectividad cercana al 70% en la reducción de síntomas de ansiedad y depresión en
+personas que buscan ayuda.<br>
+Es fundamental que avances con calma, validando tus emociones sin juzgarlas. Tal como
+plantea Carl Rogers (1961), el cambio personal ocurre en un ambiente de aceptación y
+comprensión, y ese espacio puede construirse en un proceso terapéutico.')">
 
       <img src="/assets/Amigo.png"
            alt="amigo"
            data-bs-toggle="modal"
            data-bs-target="#infoModal"
-           (click)="openModal('Amigo', 'Phasellus nec sem in justo pellentesque facilisis.')">
+           (click)="openModal('Amigo', 'Amigo, sé que ahora todo parece cuesta arriba, pero quiero recordarte que no estás solo. La
+Organización Mundial de la Salud (2022) señala que el apoyo social es un factor protector
+clave frente a la depresión y la ansiedad, y puede reducir en más del 30% el riesgo de
+desarrollar problemas emocionales graves.<br>
+Piensa que cada paso, por pequeño que parezca, cuenta. Como dijo Viktor Frankl
+(1946/2015), incluso en los momentos más oscuros, encontrar un “para qué” nos permite
+sostener el “cómo”. Yo estoy aquí para acompañarte en ese camino.')">
 
       <img src="/assets/IA.png"
            alt="ia"
            data-bs-toggle="modal"
            data-bs-target="#infoModal"
-           (click)="openModal('IA', 'Suspendisse potenti. Etiam ultricies nisi vel augue.')">
+           (click)="openModal('IA', 'Sé que atraviesas un momento muy complejo y quiero ofrecerte información que puede
+ayudarte. La Organización Panamericana de la Salud (2021) estima que cerca de 1 de cada
+5 personas en América Latina presenta algún trastorno de salud mental, lo que muestra que
+no estás solo en esta experiencia y que pedir apoyo es un acto valioso.<br>
+La investigación de Seligman y Csikszentmihalyi (2000) sobre psicología positiva destaca
+la importancia de identificar y fortalecer las propias capacidades, pues enfocarse en las
+fortalezas puede mejorar significativamente el bienestar. Reconocer que estás buscando
+ayuda ya es un indicador de resiliencia.')">
     </div>
   </div>
+</div>
+<div class="navegation-button">
+  <button class="next-btn" (click)="goToNext()">Continuar con el recorrido</button>
 </div>
 
 <!-- Modal -->
@@ -65,7 +92,7 @@
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        {{ modalText }}
+  <span [innerHTML]="modalText"></span>
       </div>
     </div>
   </div>

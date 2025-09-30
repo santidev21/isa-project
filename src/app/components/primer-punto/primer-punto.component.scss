@@ -75,10 +75,15 @@
 }
 
 .date {
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
     font-size: 0.9rem;
-    color:  var(--text-light);
+    color:  var(--text-dark);
     font-weight: bold;
+    background: var(--accent);
+    border: 2px solid var(--bg-dark);
+    border-radius: 8px;
+    padding: 0px 4px;
+
 }
 
 .custom-modal {

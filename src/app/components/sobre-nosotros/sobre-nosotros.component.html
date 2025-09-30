@@ -38,5 +38,52 @@
         </div>
       </div>
     </div>
+    <div class="referencias">
+      <button class="next-btn" 
+        data-bs-toggle="modal"
+        data-bs-target="#infoModal"
+        (click)="openModal('Referencias','
+        - American Psychological Association. (2023). Clinical practice guideline for the
+treatment of depression across three age cohorts.<br>
+- Artlist. (2025). Image to Image AI – Generador de ilustraciones con inteligencia
+artificial. [Imagen]. https://artlist.io/image-to-image-ai<br>
+- Frankl, V. E. (2015). El hombre en busca de sentido (22.a ed.). Herder. (Obra original
+publicada en 1946).<br>
+- Maid, J., & Dorigo, A. (2025). La interacción continua con IA puede sobreestimular el
+circuito dopaminérgico, aumentando el riesgo de... Revista JAIIO.<br>
+- Masip, M. (2025, 24 de enero). El uso constante de la IA o pantallas puede generar
+una falsa sensación de solución inmediata... La Ventana.<br>
+https://cadenaser.com/nacional/2025/01/24/los-riesgos-de-recurrir-a-la-inteligencia-ar
+tificial-como-psicologo-el-chat-gpt-no-cura-curan-los-profesionales-cadena-ser/<br>
+- Mendiguren, T. (2025). Los psicobots carecen de empatía y comprensión emocional
+real, lo que puede generar frustración... Cadena SER.<br>
+- OpenAI. (2025). Ilustraciones creadas con ChatGPT (DALL·E), inteligencia artificial
+generativa. [Imagen]. ChatGPT. https://openai.com/<br>
+- Organización Mundial de la Salud. (2022). World mental health report: Transforming
+mental health for all. OMS.<br>
+- Organización Panamericana de la Salud. (2021). La carga de los trastornos mentales
+en la Región de las Américas. OPS.<br>
+- Rogers, C. R. (1961). On becoming a person: A therapist’s view of psychotherapy.
+Houghton Mifflin.<br>
+- Seligman, M. E. P., & Csikszentmihalyi, M. (2000). Positive psychology: An
+introduction. American Psychologist, 55(1), 5–14.
+        ')">
+        Referencias
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content custom-modal">
+      <div class="modal-header">
+        <h5 class="modal-title">{{ modalTitle }}</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+  <span [innerHTML]="modalText"></span>
+      </div>
+    </div>
   </div>
 </div>

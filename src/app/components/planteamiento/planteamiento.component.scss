@@ -7,9 +7,26 @@
   width: 100vw;
   gap: 1rem;
   padding: 2rem;
+
+  .comic-guide{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+
+    p{
+      color: var(--text-light);
+      background: var(--bg-dark);
+      text-align: justify;
+      border-radius: 8px;
+      margin: 1rem;
+      padding: 0.5rem;
+    }
+  }
   
   .carousel-container {
-    width: 40%;
+    width: 90%;
   }
 
   .text-container {
@@ -52,4 +69,29 @@
     }
   }
 
+}
+
+.navegation-button{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  .next-btn {
+    background-color: var(--bg-dark);
+    color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .next-btn:hover {
+    background-color: var(--bg-dark-hover);
+  }
+}
+
+.modal-body{
+  text-align: justify;
 }

@@ -9,6 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./sobre-nosotros.component.scss']
 })
 export class SobreNosotrosComponent {
+  modalTitle = '';
+  modalText = '';
+
 equipo = [
   {
     foto: '/assets/equipo/Maria.png',
@@ -37,7 +40,7 @@ equipo = [
   },
   {
     foto: '/assets/equipo/Xue.png',
-    nombre: 'Xue Perez Barrios',
+    nombre: 'Xue Pérez Barrios',
     titulos: [
       'Comunicadora Social y Periodista, Universidad Pontificia Bolivariana.',
       'Estudiante de Maestría en Comunicación Digital.'
@@ -61,4 +64,9 @@ openSocial(red: 'instagram' | 'tiktok') {
     window.open('https://www.tiktok.com/@the.isa.project?_t=ZS-906g1Y3L5MX&_r=1', '_blank');
   }
 }
+
+  openModal(title: string, text: string) {
+    this.modalTitle = title;
+    this.modalText = text;
+  }
 }

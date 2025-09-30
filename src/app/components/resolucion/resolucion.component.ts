@@ -15,22 +15,21 @@ export class ResolucionComponent {
   datosIA = [
     {
       img: '/assets/psicologo.jpg',
-      texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius, eros nec efficitur euismod, lectus turpis sollicitudin augue, non ultricies enim nunc sit amet augue. Quisque ante magna, varius et vehicula congue, viverra eu nulla.'
+      texto: 'El uso constante de la IA puede crear una falsa sensación de confort, pero no resuelve los conflictos emocionales profundos, lo que dificulta el desarrollo del criterio personal y la tolerancia a la frustración. Fuente: Masip, M. (2025)'
     },
     {
       img: '/assets/psicologo.jpg',
-      texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius, eros nec efficitur euismod, lectus turpis sollicitudin augue, non ultricies enim nunc sit amet augue. Quisque ante magna, varius et vehicula congue, viverra eu nulla.'
+      texto: 'Los psicobots no pueden comprender las emociones humanas de forma auténtica, lo que puede aumentar la frustración y el aislamiento emocional. Fuente: Mendiguren, T. (2025)'
     },
     {
       img: '/assets/psicologo.jpg',
-      texto: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin varius, eros nec efficitur euismod, lectus turpis sollicitudin augue, non ultricies enim nunc sit amet augue. Quisque ante magna, varius et vehicula congue, viverra eu nulla.'
+      texto: 'La interacción constante con la IA puede sobreestimular el sistema dopaminérgico, lo que eleva el riesgo de ansiedad y comportamientos adictivos. Fuente: Maid, J., & Dorigo, A. (2025)'
     }
   ];
 
-  constructor(private respuestaService: RespuestaService, private router: Router) {}
+  constructor(private router: Router) { }
 
-  onResponder(respuesta: string) {
-    this.respuestaService.setRespuesta('P3', respuesta);
+  goToNext(){
     this.router.navigate(['/navegacion/participacion']);
   }
 }

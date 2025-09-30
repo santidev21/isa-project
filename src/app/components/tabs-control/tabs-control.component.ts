@@ -18,7 +18,5 @@ export class TabsControlComponent {
   get resolucionEnabled() {
     return this.respuestaService.tieneRespuesta('P2');
   }
-  get participacionEnabled() {
-    return this.respuestaService.tieneRespuesta('P3');
-  }
+  
 }
