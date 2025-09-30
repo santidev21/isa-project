@@ -6,10 +6,18 @@
       </div>
       <div class="audio-texto-container">
           <div class="audio-overlay">
-              <button class="play-btn" (click)="audioPlayer.play()">
-                  <img src="/assets/icons/play.svg" alt="Play">
+              <button class="play-btn" *ngIf="!isPlaying" (click)="audioPlayer.play(); onPlay()">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="white"/>
+                </svg>
               </button>
-              <audio #audioPlayer src="/assets/audio/segundo-punto.mp3"></audio>
+              <button class="play-btn" *ngIf="isPlaying" (click)="audioPlayer.pause(); onPause()">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="6" y="5" width="4" height="14" fill="white"/>
+                  <rect x="14" y="5" width="4" height="14" fill="white"/>
+                </svg>
+              </button>
+              <audio #audioPlayer src="/assets/audio/segundo-punto.mp3" (play)="onPlay()" (pause)="onPause()" (ended)="onEnded()"></audio>
           </div>      
           <div class="audio-text">
             <p>
