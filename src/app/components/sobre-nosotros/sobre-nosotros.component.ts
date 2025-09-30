@@ -14,14 +14,14 @@ export class SobreNosotrosComponent {
 
 equipo = [
   {
-    foto: '/assets/equipo/Maria.png',
+    foto: '/assets/equipo/Maria.webp',
     nombre: 'Maria Isabel Sierra',
     titulos: [
       'Estudiante de octavo semestre de Comunicación Social y Periodismo. Universidad Pontificia Bolivariana.'
     ]
   },
   {
-    foto: '/assets/equipo/Luisa.png',
+    foto: '/assets/equipo/Luisa.webp',
     nombre: 'Luisa Martínez',
     titulos: [
       'Periodista, Universidad de Antioquia. Asesora de comunicaciones.',
@@ -29,7 +29,7 @@ equipo = [
     ]
   },
   {
-    foto: '/assets/equipo/Slendy.png',
+    foto: '/assets/equipo/Slendy.webp',
     nombre: 'Slendy Flórez',
     titulos: [
       'Comunicadora Social, Universidad de Pamplona.',
@@ -39,7 +39,7 @@ equipo = [
     ]
   },
   {
-    foto: '/assets/equipo/Xue.png',
+    foto: '/assets/equipo/Xue.webp',
     nombre: 'Xue Pérez Barrios',
     titulos: [
       'Comunicadora Social y Periodista, Universidad Pontificia Bolivariana.',
@@ -47,7 +47,7 @@ equipo = [
     ]
   },
   {
-    foto: '/assets/equipo/Claudia.png',
+    foto: '/assets/equipo/Claudia.webp',
     nombre: 'Claudia Sandoval',
     titulos: [
       'Comunicadora Social y Periodista, Universidad Pontificia Bolivariana.',,

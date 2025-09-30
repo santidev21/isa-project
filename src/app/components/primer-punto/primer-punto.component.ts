@@ -17,7 +17,7 @@ export class PrimerPuntoComponent {
   constructor(private respuestaService: RespuestaService, private router: Router) {}
 
   openModal(num: number) {
-    this.modalImg = `/assets/linea-tiempo/respuestas/${num}.png`;
+    this.modalImg = `/assets/linea-tiempo/respuestas/${num}.webp`;
   }
 
   onResponder(respuesta: string) {
