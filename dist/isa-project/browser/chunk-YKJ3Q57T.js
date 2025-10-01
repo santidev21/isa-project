@@ -1,1 +1,0 @@
-import{J as a,a as r}from"./chunk-6IPJFLZA.js";var i=class t{respuestas={};setRespuesta(e,s){this.respuestas[e]=s}getRespuesta(e){return this.respuestas[e]}tieneRespuesta(e){return!!this.respuestas[e]}getRespuestas(){return r({},this.respuestas)}static \u0275fac=function(s){return new(s||t)};static \u0275prov=a({token:t,factory:t.\u0275fac,providedIn:"root"})};export{i as a};
