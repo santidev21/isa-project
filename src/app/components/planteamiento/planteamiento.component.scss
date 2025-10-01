@@ -7,6 +7,49 @@
   width: 100vw;
   gap: 1rem;
   padding: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .planteamiento-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0.5rem;
+  }
+  .comic-guide, .text-container {
+    width: 98vw;
+    margin: 0 auto;
+  }
+  .image-container img {
+    width: 90px;
+    height: 90px;
+  }
+  .text-container span {
+    width: 98vw;
+    font-size: 1rem;
+    padding: 6px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .planteamiento-container {
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.5rem 0.1rem;
+  }
+  .comic-guide, .text-container {
+    width: 100vw;
+    margin: 0 auto;
+  }
+  .image-container img {
+    width: 50px;
+    height: 50px;
+  }
+  .text-container span {
+    width: 100vw;
+    font-size: 0.8rem;
+    padding: 3px 5px;
+  }
+}
 
   .comic-guide{
     display: flex;
@@ -28,6 +71,47 @@
   .carousel-container {
     width: 90%;
   }
+    @media (max-width: 1024px) {
+      .planteamiento-container {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem 0.5rem;
+      }
+      .comic-guide, .text-container {
+        width: 98vw;
+        margin: 0 auto;
+      }
+      .image-container img {
+        width: 90px;
+        height: 90px;
+      }
+      .text-container span {
+        width: 98vw;
+        font-size: 1rem;
+        padding: 6px 10px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .planteamiento-container {
+        flex-direction: column;
+        gap: 0.2rem;
+        padding: 0.5rem 0.1rem;
+      }
+      .comic-guide, .text-container {
+        width: 100vw;
+        margin: 0 auto;
+      }
+      .image-container img {
+        width: 50px;
+        height: 50px;
+      }
+      .text-container span {
+        width: 100vw;
+        font-size: 0.8rem;
+        padding: 3px 5px;
+      }
+    }
 
   .text-container {
     color: var(--text-light);
@@ -69,7 +153,7 @@
     }
   }
 
-}
+
 
 .navegation-button{
   display: flex;

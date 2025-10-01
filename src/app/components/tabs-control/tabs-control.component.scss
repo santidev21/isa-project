@@ -17,6 +17,41 @@
     border-radius: 8px;
     padding: 10px 20px;
 }
+@media (max-width: 1024px) {
+  .tabs-background {
+    margin: 10px 10px;
+    padding: 10px 5px;
+  }
+  .tabs-nav button {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tabs-container {
+    height: auto;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+  }
+  .tabs-background {
+    margin: 5px 2px;
+    padding: 5px 2px;
+    border-radius: 6px;
+  }
+  .tabs-nav {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .tabs-nav button {
+    font-size: 0.9rem;
+    padding: 7px 6px;
+    border-radius: 6px;
+  }
+  .tabs-content {
+    padding: 0 2vw;
+  }
+}
 
 /* Barra de tabs */
 .tabs-nav {
@@ -61,4 +96,74 @@
   opacity: 0.5;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+/* Fix solapamiento entre tabs-background y tabs-content */
+.tabs-background {
+  margin-bottom: 40px;
+}
+.tabs-content {
+  padding-top: 32px;
+}
+@media (max-width: 1024px) {
+  .tabs-background {
+    margin-bottom: 32px;
+  }
+  .tabs-content {
+    padding-top: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .tabs-background {
+    margin-bottom: 18px;
+  }
+  .tabs-content {
+    padding-top: 16px;
+  }
+}
+
+/* Fix solapamiento entre tabs-background y tabs-content */
+.tabs-background {
+  margin-bottom: 24px;
+}
+.tabs-content {
+  padding-top: 12px;
+}
+@media (max-width: 1024px) {
+  .tabs-background {
+    margin-bottom: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .tabs-background {
+    margin-bottom: 12px;
+  }
+  .tabs-content {
+    padding-top: 8px;
+  }
+}
+
+/* Responsive y scroll para tabs-content */
+.tabs-nav {
+  flex-wrap: wrap;
+  width: 100%;
+}
+.tabs-content {
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .tabs-nav {
+    flex-direction: column;
+    gap: 4px;
+    align-items: stretch;
+    width: 100%;
+  }
+  .tabs-content {
+    max-height: calc(100vh - 80px);
+    padding-bottom: 2rem;
+    overflow-y: auto;
+  }
 }
