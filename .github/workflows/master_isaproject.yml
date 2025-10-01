@@ -10,41 +10,28 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: read # This is required for actions/checkout
-
+      id-token: write
+      contents: read
     steps:
       - uses: actions/checkout@v4
-
-      - name: Set up Node.js version
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20.x'
-
       - name: Install dependencies and build Angular
         run: |
           npm install
           npm run build --prod
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    permissions:
-      id-token: write # This is required for requesting the JWT
-      contents: read # This is required for actions/checkout
-
-    steps:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_51E6DE07BA0B4A2D900DF12E01ED9F27 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_D7565C6D6B9A4F92A28CF69EBBE697FB }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_2AEBEE777A7E4AB09946F0AD7B2B338C }}
-
-      - name: Deploy Angular SPA to Azure Web App
-        id: deploy-to-webapp
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_… }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_… }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_… }}
+      - name: Deploy Angular SPA
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'isaproject'
