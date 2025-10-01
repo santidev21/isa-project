@@ -1,45 +1,82 @@
-
-
-.tabs-background{
-    margin: 10px 80px;
-    background: var(--bg-dark);
-    border: 2px solid var(--accent);
-    border-radius: 8px;
-    padding: 10px 20px;
+.tabs-background {
+  margin: 10px 80px;
+  background: var(--bg-dark);
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-bottom: 24px; /* default spacing */
 }
+
+/* --- Medium screens: 1200px to 1500px --- */
+@media (max-width: 1500px) and (min-width: 1200px) {
+  .tabs-background {
+    margin: 10px 40px;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+  }
+
+  .tabs-nav button {
+    font-size: 0.8rem;
+    padding: 9px 14px;
+  }
+
+  .tabs-content {
+    padding-top: 20px;
+  }
+}
+
+/* --- Tablets / small laptops --- */
 @media (max-width: 1024px) {
   .tabs-background {
     margin: 10px 10px;
     padding: 10px 5px;
+    margin-bottom: 18px;
   }
+
   .tabs-nav button {
     font-size: 1rem;
     padding: 8px 10px;
   }
+
+  .tabs-content {
+    padding-top: 24px;
+  }
 }
 
+/* --- Mobile --- */
 @media (max-width: 600px) {
   .tabs-container {
     height: auto;
     min-height: 100vh;
     padding-bottom: 2rem;
   }
+
   .tabs-background {
     margin: 5px 2px;
     padding: 5px 2px;
     border-radius: 6px;
+    margin-bottom: 12px;
   }
+
   .tabs-nav {
     flex-direction: column;
     gap: 4px;
+    align-items: stretch;
+    width: 100%;
   }
+
   .tabs-nav button {
     font-size: 0.9rem;
     padding: 7px 6px;
     border-radius: 6px;
   }
+
   .tabs-content {
     padding: 0 2vw;
+    padding-top: 8px;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
+    padding-bottom: 2rem;
   }
 }
 
@@ -48,6 +85,8 @@
   display: flex;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .tabs-nav button {
@@ -67,19 +106,10 @@
   border: 2px solid var(--text-light);
 }
 
-
 .tabs-nav button:hover:not(.active):not(.disabled) {
   background: var(--accent-hover);
   color: var(--text-dark);
   border: 2px solid var(--text-light);
-}
-
-.tabs-content {
-  flex: 1;
-  overflow:hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .tabs-nav button.disabled {
@@ -88,72 +118,14 @@
   pointer-events: none;
 }
 
-/* Fix solapamiento entre tabs-background y tabs-content */
-.tabs-background {
-  margin-bottom: 40px;
-}
+/* Tabs content */
 .tabs-content {
-  padding-top: 32px;
-}
-@media (max-width: 1024px) {
-  .tabs-background {
-    margin-bottom: 32px;
-  }
-  .tabs-content {
-    padding-top: 24px;
-  }
-}
-@media (max-width: 600px) {
-  .tabs-background {
-    margin-bottom: 18px;
-  }
-  .tabs-content {
-    padding-top: 16px;
-  }
-}
-
-/* Fix solapamiento entre tabs-background y tabs-content */
-.tabs-background {
-  margin-bottom: 24px;
-}
-.tabs-content {
-  padding-top: 12px;
-}
-@media (max-width: 1024px) {
-  .tabs-background {
-    margin-bottom: 18px;
-  }
-}
-@media (max-width: 600px) {
-  .tabs-background {
-    margin-bottom: 12px;
-  }
-  .tabs-content {
-    padding-top: 8px;
-  }
-}
-
-/* Responsive y scroll para tabs-content */
-.tabs-nav {
-  flex-wrap: wrap;
-  width: 100%;
-}
-.tabs-content {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow-y: auto;
   max-height: calc(100vh - 120px);
   width: 100%;
-}
-
-@media (max-width: 600px) {
-  .tabs-nav {
-    flex-direction: column;
-    gap: 4px;
-    align-items: stretch;
-    width: 100%;
-  }
-  .tabs-content {
-    max-height: calc(100vh - 80px);
-    padding-bottom: 2rem;
-    overflow-y: auto;
-  }
 }

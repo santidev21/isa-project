@@ -2,8 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 3rem;
-  margin-top: 1rem;
   flex-wrap: wrap;
 }
 
@@ -14,8 +12,8 @@
   max-width: 400px;
   color: #fff;
   text-align: left;
-  padding: 2rem 1rem;
-  margin-left: 20px;
+  padding: 1rem 1rem;
+  margin-right: 2rem;
   background: rgba(0,0,0,0.6);
   border-radius: 16px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.5);
@@ -90,7 +88,6 @@
 
   .team-cards {
     display: flex;
-    gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -171,31 +168,29 @@
 /* --- Medium screens: 1200px to 1500px --- */
 @media (max-width: 1500px) and (min-width: 1200px) {
   .about-team-section {
-    gap: 2rem;
-    margin-top: 340px;
     font-size: 12px;
+    // margin-top: 340px;
     // display: flex;
-    // flex-direction: column;
   }
 
   .about-left {
     max-width: 350px;
     padding: 1.5rem;
+    // margin: 10px;
   }
 
   .about-right {
     min-width: 350px;
-    gap: 1.5rem;
   }
 
   .team-title {
-    font-size: 20px !important;
+    font-size: 20px ;
   }
 
   .team-card { 
-    width: 160px;
-    padding: 1rem;
-    font-size: 20px !important;
+    width: 160px ;
+    padding: 0.2rem;
+    font-size: 20px ;
   }
 
   .team-photo {
@@ -204,11 +199,11 @@
   }
 
   .team-name{
-    font-size: 14px !important;
+    font-size: 14px ;
   }
 
   .team-titulos *{
-    font-size: 12px !important;
+    font-size: 12px ;
   }
 }
 
