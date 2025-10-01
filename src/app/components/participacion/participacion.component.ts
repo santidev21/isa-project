@@ -17,19 +17,23 @@ export class ParticipacionComponent implements OnInit {
 
   constructor(private respuestaService: RespuestaService) {}
 
-  ngOnInit(): void {
-    fetch('https://www.reddit.com/r/theIsAproject/comments/1nuqr48/comparte_tu_opini%C3%B3n_la_ia_es_un_buen_sustituto/.json')
-      .then(res => res.json())
-      .then(data => {
-        // El primer objeto es el post, el segundo son los comentarios
-        const post = data[0].data.children[0].data;
-        this.postTitle = post.title;
-        this.postDescription = post.selftext || '';
-        const commentsArr = data[1].data.children;
-        this.comments = commentsArr
-          .map((c: any) => c.data.body)
-          .filter((body: string) => !!body)
-          .map((body: string) => body.length > 120 ? body.slice(0, 120) + '...' : body);
-      });
-  }
+ngOnInit(): void {
+const redditUrl = 'https://www.reddit.com/r/theIsAproject/comments/1nur8yz/comparte_tu_opini%C3%B3n_la_ia_es_un_buen_sustituto/.json';
+const proxyUrl = 'https://corsproxy.io/?' + encodeURIComponent(redditUrl);
+
+fetch(proxyUrl)
+  .then(res => res.json())
+  .then(data => {
+    const redditData = JSON.parse(data.contents || JSON.stringify(data));
+    const post = redditData[0].data.children[0].data;
+    this.postTitle = post.title;
+    this.postDescription = post.selftext || '';
+    const commentsArr = redditData[1].data.children;
+    this.comments = commentsArr
+      .map((c: any) => c.data.body)
+      .filter((body: string) => !!body)
+      .map((body: string) => body.length > 120 ? body.slice(0, 120) + '...' : body);
+  })
+  .catch(err => console.error('Error fetching Reddit data:', err));
+}
 }
