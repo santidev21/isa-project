@@ -1,14 +1,4 @@
-/* Contenedor principal con fondo */
-.tabs-container {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: url("/assets/background.webp") no-repeat center center;
-  background-size: cover;   /* ocupa toda la pantalla */
-  background-attachment: fixed; /* opcional para efecto fijo */
-  overflow: hidden;
-}
+
 
 .tabs-background{
     margin: 10px 80px;
